@@ -1,50 +1,19 @@
-//
-//  main.cpp
-//  Labor_7_1
-//
-//  Created by Felix Ohlsen on 14.12.16.
-//  Copyright © 2016 Felix Ohlsen. All rights reserved.
-//
-
-#include "main.hpp"
 #include <iostream>
-#include <math.h>
+#include "CubicBezier.hpp"
+#include "Point.hpp"
 
-using namespace std;
+int main(){
+    Point a = new Point(0,0);
+    Point b = new Point(1,1);
+    Point c = new Point(2,1);
+    Point d = new Point(2,0);
+    CubicBezier bezier = new CubicBezier();
+    bezier.setPoint(1,new Point(0,0));
+    bezier.setPoint(2,new Point(1,1));
+    bezier.setPoint(3,new Point(2,1));
+    bezier.setPoint(4,new Point(2,0));
 
-class Point{
-    public:
-    float x, y;
-    Point( float a, float b);
-    friend Point operator+( Point p, Point q);
-    friend Point operator-( Point p, Point q);
-    friend Point operator*( Point p, Point q);
-    friend Point operator/( Point p, Point q);
-};
 
-Point::Point( float a, float b){
-    x = a;
-    y = b;
-}
 
-friend float operator+( Point p, Point q){
-    return Point(p.x + q.x, p.y + q.y);
-}
-
-friend float operator-( Point p, Point q){
-    return Point(p.x - q.x, p.y - q.y);
-}
-
-friend float operator*( Point p, Point q){
-    return Point(p.x * q.x, p.y * q.y);
-}
-
-friend float operator/( Point p, Point q){
-    return Point(p.x / q.x, p.y / q.y);
-}
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
     return 0;
 }

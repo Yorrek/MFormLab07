@@ -12,20 +12,23 @@
 #define CubicBezier_hpp
 
 #include <stdio.h>
-#include "BezierControlPoints.hpp"
+#include "Point.hpp"
 
 using namespace std;
 
 class CubicBezier
 {
 private:
-    BezierControlPoints m_points;
+    Point m_points[4];
 
 public:
-    CubicBezier( BezierControlPoints points );
+    CubicBezier();
 
     void Subdivide( float t, CubicBezier *segment1, CubicBezier *segment2 );
 
+    Point getPoint(int i) { return m_points[i - 1]; }
+    Point[] getPoints() { return m_points; }
+    void setPoint(int i, Point a);
 };
 
 #endif /* CubicBezier_hpp */
