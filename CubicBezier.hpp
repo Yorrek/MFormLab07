@@ -26,6 +26,7 @@ public:
 
     void Subdivide( float t, CubicBezier *segment1, CubicBezier *segment2 );
 
+
     Point getPoint(int i) { return m_points[i - 1]; }
     Point[] getPoints() { return m_points; }
     void setPoint(int i, Point a);

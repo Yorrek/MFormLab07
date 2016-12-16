@@ -1,8 +1,13 @@
 #include "Point.hpp"
 
 Point::Point( float x, float y){
-    m_x = x;
-    m_y = y;
+    this->setX(x);
+    this->setY(y);
+}
+
+Point::Point(Point p) {
+    this->setX(p.getX());
+    this->setY(p.getY());
 }
 
 friend float operator+( Point p, Point q){
