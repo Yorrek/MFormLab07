@@ -16,7 +16,7 @@
 
 class CubicBezier {
 private:
-    Point m_points[];
+    Point m_points[4];
 
 public:
     void setPoint(int i, Point a);

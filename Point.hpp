@@ -25,9 +25,6 @@ public:
 
     void setY(float y) { m_y = y; }
 
-    float getX() { return m_x; }
-
-    float getY() { return m_x; }
 };
 
 #endif

@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Felix/Documents/Studium/MFormLab07/CubicBezier.cpp" "C:/Users/Felix/Documents/Studium/MFormLab07/cmake-build-debug/CMakeFiles/MFormLab07.dir/CubicBezier.cpp.obj"
-  "C:/Users/Felix/Documents/Studium/MFormLab07/Point.cpp" "C:/Users/Felix/Documents/Studium/MFormLab07/cmake-build-debug/CMakeFiles/MFormLab07.dir/Point.cpp.obj"
-  "C:/Users/Felix/Documents/Studium/MFormLab07/main.cpp" "C:/Users/Felix/Documents/Studium/MFormLab07/cmake-build-debug/CMakeFiles/MFormLab07.dir/main.cpp.obj"
+  "/Users/Nico/ClionProjects/MFormLab07/CubicBezier.cpp" "/Users/Nico/ClionProjects/MFormLab07/cmake-build-debug/CMakeFiles/MFormLab07.dir/CubicBezier.cpp.o"
+  "/Users/Nico/ClionProjects/MFormLab07/Point.cpp" "/Users/Nico/ClionProjects/MFormLab07/cmake-build-debug/CMakeFiles/MFormLab07.dir/Point.cpp.o"
+  "/Users/Nico/ClionProjects/MFormLab07/main.cpp" "/Users/Nico/ClionProjects/MFormLab07/cmake-build-debug/CMakeFiles/MFormLab07.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

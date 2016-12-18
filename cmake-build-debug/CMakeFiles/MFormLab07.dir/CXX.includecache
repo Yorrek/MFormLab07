@@ -6,29 +6,29 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Felix/Documents/Studium/MFormLab07/CubicBezier.cpp
+/Users/Nico/ClionProjects/MFormLab07/CubicBezier.cpp
 CubicBezier.hpp
-C:/Users/Felix/Documents/Studium/MFormLab07/CubicBezier.hpp
+/Users/Nico/ClionProjects/MFormLab07/CubicBezier.hpp
 iostream
-C:/Users/Felix/Documents/Studium/MFormLab07/iostream
+/Users/Nico/ClionProjects/MFormLab07/iostream
 
-C:/Users/Felix/Documents/Studium/MFormLab07/CubicBezier.hpp
+/Users/Nico/ClionProjects/MFormLab07/CubicBezier.hpp
 stdio.h
 -
 Point.hpp
-C:/Users/Felix/Documents/Studium/MFormLab07/Point.hpp
+/Users/Nico/ClionProjects/MFormLab07/Point.hpp
 
-C:/Users/Felix/Documents/Studium/MFormLab07/Point.cpp
+/Users/Nico/ClionProjects/MFormLab07/Point.cpp
 Point.hpp
-C:/Users/Felix/Documents/Studium/MFormLab07/Point.hpp
+/Users/Nico/ClionProjects/MFormLab07/Point.hpp
 
-C:/Users/Felix/Documents/Studium/MFormLab07/Point.hpp
+/Users/Nico/ClionProjects/MFormLab07/Point.hpp
 
-C:/Users/Felix/Documents/Studium/MFormLab07/main.cpp
+/Users/Nico/ClionProjects/MFormLab07/main.cpp
 iostream
 -
 CubicBezier.hpp
-C:/Users/Felix/Documents/Studium/MFormLab07/CubicBezier.hpp
+/Users/Nico/ClionProjects/MFormLab07/CubicBezier.hpp
 Point.hpp
-C:/Users/Felix/Documents/Studium/MFormLab07/Point.hpp
+/Users/Nico/ClionProjects/MFormLab07/Point.hpp
 
