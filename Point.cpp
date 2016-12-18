@@ -5,7 +5,7 @@ Point::Point( float x, float y){
     this->setY(y);
 }
 
-Point::Point() {}
+Point::~Point() {}
 
 Point::Point(Point p) {
     this->setX(p.getX());

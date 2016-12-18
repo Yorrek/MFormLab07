@@ -2,26 +2,32 @@
 #define Point_hpp
 
 
-class Point
-{
-    private:
-        float m_x, m_y;
+class Point {
+private:
+    float m_x, m_y;
 
-    public:
-        Point(float x, float y);
-        Point(Point p);
-        Point();
+public:
+    Point(float x, float y);
 
-        friend Point operator+( Point p, Point q);
-        friend Point operator-( Point p, Point q);
-        friend Point operator*( Point p, Point q);
-        friend Point operator/( Point p, Point q);
+    Point(Point p);
+    Point();
+    ~Point();
 
-        void setX(float x){ m_x = x; }
-        void setY(float y){ m_y = y; }
+    friend Point operator+(Point p, Point q);
 
-        float getX(){ return m_x; }
-        float getY(){ return m_x; }
+    friend Point operator-(Point p, Point q);
+
+    friend Point operator*(Point p, Point q);
+
+    friend Point operator/(Point p, Point q);
+
+    void setX(float x) { m_x = x; }
+
+    void setY(float y) { m_y = y; }
+
+    float getX() { return m_x; }
+
+    float getY() { return m_x; }
 };
 
 #endif

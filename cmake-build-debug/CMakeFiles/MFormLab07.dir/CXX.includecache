@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Felix/Documents/Studium/MFormLab07/CubicBezier.cpp
+CubicBezier.hpp
+C:/Users/Felix/Documents/Studium/MFormLab07/CubicBezier.hpp
+iostream
+C:/Users/Felix/Documents/Studium/MFormLab07/iostream
+
+C:/Users/Felix/Documents/Studium/MFormLab07/CubicBezier.hpp
+stdio.h
+-
+Point.hpp
+C:/Users/Felix/Documents/Studium/MFormLab07/Point.hpp
+
+C:/Users/Felix/Documents/Studium/MFormLab07/Point.cpp
+Point.hpp
+C:/Users/Felix/Documents/Studium/MFormLab07/Point.hpp
+
+C:/Users/Felix/Documents/Studium/MFormLab07/Point.hpp
+
+C:/Users/Felix/Documents/Studium/MFormLab07/main.cpp
+iostream
+-
+CubicBezier.hpp
+C:/Users/Felix/Documents/Studium/MFormLab07/CubicBezier.hpp
+Point.hpp
+C:/Users/Felix/Documents/Studium/MFormLab07/Point.hpp
+

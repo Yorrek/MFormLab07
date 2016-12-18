@@ -14,20 +14,15 @@
 #include <stdio.h>
 #include "Point.hpp"
 
-class CubicBezier
-{
+class CubicBezier {
 private:
-    Point m_points[4];
+    Point m_points[];
 
 public:
-    CubicBezier();
-
-    void Subdivide( float t, CubicBezier *segment1, CubicBezier *segment2 );
-
-
-    Point getPoint(int i) { return m_points[i]; }
-    Point[] getPoints() { return m_points; }
     void setPoint(int i, Point a);
+    CubicBezier();
+    void Subdivide(float t, CubicBezier *segment1, CubicBezier *segment2);
+    Point points[4];
 };
 
 #endif /* CubicBezier_hpp */

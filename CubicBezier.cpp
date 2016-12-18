@@ -67,14 +67,17 @@ void CubicBezier::Subdivide(float t, CubicBezier *segment1, CubicBezier *segment
 }
 */
 
+
 void CubicBezier::Subdivide(float t, CubicBezier *segment1, CubicBezier *segment2) {
+    Point pTmp; //Temporärer speicher für einen Punkt
+    Point p1; //Erster Punkt
+    Point p2; //Zweiter Punkt
     segment1->setPoint(1, this->getPoint(0)); //Erster Wert in Segment 1
     segment1->setPoint(3, this->getPoint(3)); //Letzter Wert in Segment 2
-    Point pTmp;
-    Point p1 = new Point(); //Erster Punkt
-    Point p2 = this->getPoint(i + 1); //Zweiter Punkt
     // Erste Generation
     for (int i = 0; i < 3; i++) {
+        p1 = this->getPoint(i); //Erster Punkt wird gesetzt
+        p2 = this->getPoint(i + 1); //Zweiter Punkt wird gesetzt
         p1.setX(p1.getX() * (t - 1)); //X-Wert für den ersten Punkt
         p1.setY(p1.getY() * (t - 1)); //y-Wert für den ersten Punkt
         p2.setX(p2.getX() * t); //X-Wert für den zweiten Punkt
@@ -82,7 +85,7 @@ void CubicBezier::Subdivide(float t, CubicBezier *segment1, CubicBezier *segment
         if (i == 0) {
             segment1->setPoint(1, p1 + p2); //Zweiter Punkt für Segment1
         } else if (i == 1) {
-            pTmp = new Point(p1 + p2); //Temporärer Punkt
+            pTmp = (p1 + p2); //Temporärer Punkt
         } else {
             segment2->setPoint(2, p1 + p2); //Zweiter Punkt für Segment2
         }

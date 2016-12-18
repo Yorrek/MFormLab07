@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MFormLab07.dir/CubicBezier.cpp.o"
-  "CMakeFiles/MFormLab07.dir/main.cpp.o"
-  "CMakeFiles/MFormLab07.dir/Point.cpp.o"
+  "CMakeFiles/MFormLab07.dir/CubicBezier.cpp.obj"
+  "CMakeFiles/MFormLab07.dir/main.cpp.obj"
+  "CMakeFiles/MFormLab07.dir/Point.cpp.obj"
   "MFormLab07.pdb"
-  "MFormLab07"
+  "MFormLab07.exe"
+  "MFormLab07.exe.manifest"
+  "libMFormLab07.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
