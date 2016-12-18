@@ -14,7 +14,22 @@ int main() {
 
     CubicBezier segment1;
     CubicBezier segment2;
-    bezier.Subdivide(.5, &segment1, &segment2);
+
+    bezier.Subdivide((float).5, &segment1, &segment2);
+
+    cout << endl << "Segment 1" << endl << endl;
+
+    for (int i = 0; i < 4; i++) {
+        cout << "Punkt" << i << ": " << segment1.points[i].getX() << "  " << segment1.points[i].getY() << endl;
+    }
+
+    cout << endl << "Segment 2" << endl << endl;
+
+    for (int i = 0; i < 4; i++) {
+        cout << "Punkt" << i << ": " << segment2.points[i].getX() << "  " << segment2.points[i].getY() << endl;
+    }
 
     return 0;
 }
+
+
