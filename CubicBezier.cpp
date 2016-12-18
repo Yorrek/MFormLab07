@@ -86,8 +86,8 @@ void CubicBezier::Subdivide(float t, CubicBezier *segment1, CubicBezier *segment
         p1 = this->points[i]; //Erster Punkt wird gesetzt
         p2 = this->points[i + 1]; //Zweiter Punkt wird gesetzt
 
-        p1.setX(p1.m_x * (t - 1)); //X-Wert für den ersten Punkt
-        p1.setY(p1.m_y * (t - 1)); //y-Wert für den ersten Punkt
+        p1.setX(p1.m_x * (1 - t)); //X-Wert für den ersten Punkt
+        p1.setY(p1.m_y * (1 - t)); //y-Wert für den ersten Punkt
         p2.setX(p2.m_x * t); //X-Wert für den zweiten Punkt
         p2.setY(p2.m_y * t); //Y-Wert für dem zweiten Punkt
 
@@ -104,16 +104,16 @@ void CubicBezier::Subdivide(float t, CubicBezier *segment1, CubicBezier *segment
     p1 = segment1->points[1];
     p2 = pTmp;
 
-    p1.setX(p1.m_x * (t - 1)); //X-Wert für den ersten Punkt
-    p1.setY(p1.m_y * (t - 1)); //Y-Wert für den ersten Punkt
+    p1.setX(p1.m_x * (1 - t)); //X-Wert für den ersten Punkt
+    p1.setY(p1.m_y * (1 - t)); //Y-Wert für den ersten Punkt
     p2.setX(p2.m_x * t); //X-Wert für den zweiten Punkt
     p2.setY(p2.m_y * t); //Y-Wert für den zweiten Punkt
     segment1->setPoint(2, p1 + p2); //Dritter Punkt für Segment1
 
     p1 = pTmp;
     p2 = segment2->points[2];
-    p1.setX(p1.m_x * (t - 1)); //X-Wert für den ersten Punkt
-    p1.setY(p1.m_y * (t - 1)); //Y-Wert für den ersten Punkt
+    p1.setX(p1.m_x * (1 - t)); //X-Wert für den ersten Punkt
+    p1.setY(p1.m_y * (1 - t)); //Y-Wert für den ersten Punkt
     p2.setX(p2.m_x * t); //X-Wert für den zweiten Punkt
     p2.setY(p2.m_y * t); //Y-Wert für den zweiten Punkt
     segment2->setPoint(1, p1 + p2); //Dritter Punkt für Segment2
@@ -122,8 +122,8 @@ void CubicBezier::Subdivide(float t, CubicBezier *segment1, CubicBezier *segment
     p1 = segment1->points[2];
     p2 = segment2->points[1];
 
-    p1.setX(p1.m_x * (t - 1)); //X-Wert für den ersten Punkt
-    p1.setY(p1.m_y * (t - 1)); //Y-Wert für den ersten Punkt
+    p1.setX(p1.m_x * (1 - t)); //X-Wert für den ersten Punkt
+    p1.setY(p1.m_y * (1 - t)); //Y-Wert für den ersten Punkt
     p2.setX(p2.m_x * t); //X-Wert für den zweiten Punkt
     p2.setY(p2.m_y * t); //Y-Wert für dem zweiten Punkt
 

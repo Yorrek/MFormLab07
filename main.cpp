@@ -15,7 +15,7 @@ int main() {
     CubicBezier segment1;
     CubicBezier segment2;
 
-    bezier.Subdivide((float).5, &segment1, &segment2);
+    bezier.Subdivide((float)0.5, &segment1, &segment2);
 
     cout << endl << "Segment 1" << endl << endl;
 
