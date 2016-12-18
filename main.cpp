@@ -2,6 +2,8 @@
 #include "CubicBezier.hpp"
 #include "Point.hpp"
 
+using namespace std;
+
 int main(){
     CubicBezier bezier = new CubicBezier();
     bezier.setPoint(1,new Point(0,0));

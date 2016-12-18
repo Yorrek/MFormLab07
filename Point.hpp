@@ -1,7 +1,6 @@
 #ifndef Point_hpp
 #define Point_hpp
 
-using namespace std;
 
 class Point
 {
@@ -11,6 +10,7 @@ class Point
     public:
         Point(float x, float y);
         Point(Point p);
+        Point();
 
         friend Point operator+( Point p, Point q);
         friend Point operator-( Point p, Point q);

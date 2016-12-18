@@ -14,8 +14,6 @@
 #include <stdio.h>
 #include "Point.hpp"
 
-using namespace std;
-
 class CubicBezier
 {
 private:
