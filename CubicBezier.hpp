@@ -21,8 +21,9 @@ private:
 public:
     void setPoint(int i, Point a);
     CubicBezier();
-    void Subdivide(float t, CubicBezier *segment1, CubicBezier *segment2);
+    ~CubicBezier();
     Point points[4];
+    void Subdivide(float t, CubicBezier *segment1, CubicBezier *segment2);
 };
 
 #endif /* CubicBezier_hpp */

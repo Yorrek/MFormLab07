@@ -3,14 +3,14 @@
 
 
 class Point {
-private:
-    float m_x, m_y;
 
 public:
+    float m_x, m_y;
+
     Point(float x, float y);
 
-    Point(Point p);
     Point();
+
     ~Point();
 
     friend Point operator+(Point p, Point q);

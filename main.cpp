@@ -15,7 +15,6 @@ int main() {
     CubicBezier segment1;
     CubicBezier segment2;
     bezier.Subdivide(.5, &segment1, &segment2);
-    system("PAUSE");
-    return 0;
 
+    return 0;
 }
