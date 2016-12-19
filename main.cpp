@@ -9,9 +9,9 @@ int main() {
     //Mit den folgenden Methoden aufrufen erzeugen wir 4 Kontrollpunkte mit jeweils einem X und einem Y Punkt.
     CubicBezier bezier;
     bezier.setPoint(0, Point(0, 0));
-    bezier.setPoint(1, Point(1, 2));
-    bezier.setPoint(2, Point(4, 2));
-    bezier.setPoint(3, Point(6, 0));
+    bezier.setPoint(1, Point(1, 4));
+    bezier.setPoint(2, Point(5, 6));
+    bezier.setPoint(3, Point(7, 0));
 
     //Für die weitere Berechnung erstellen wir zwei Segmente mit den Eigenschaften von CubicBezier
     CubicBezier segment1;
