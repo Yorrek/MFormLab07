@@ -102,17 +102,6 @@ void CubicBezier::multipliyMatrix(float t, CubicBezier *aMatrix, CubicBezier *bM
             subDivMatrix2[i].m_y += product2[i][j] * bMatrix->points[j].m_y;
         }
     }
-
-    cout << "subDivMatrix für die rechte Hälfte" << endl;
-    for (int i = 0; i < 4; i++) {
-        cout << "Stelle " << i << " " << "x: " << subDivMatrix1[i].m_x << "Y: " << subDivMatrix1[i].m_y << endl;
-    }
-
-    cout << "subDivMatrix für die linke Hälfte" << endl;
-    for (int i = 0; i < 4; i++) {
-        cout << "Stelle " << i << " " << "x: " << subDivMatrix2[i].m_x << "Y: " << subDivMatrix1[i].m_y << endl;
-    }
-
 }
 
 void CubicBezier::setPoint(int i, Point a) {
