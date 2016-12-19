@@ -23,9 +23,10 @@ public:
     CubicBezier();
     ~CubicBezier();
     Point points[4];
-    Point subDivMatrix[4][4];
+    Point subDivMatrix1[4];
+    Point subDivMatrix2[4];
     void Subdivide(float t, CubicBezier *segment1, CubicBezier *segment2);
-    float multipliyMatrix(float t, Point *aMatrix[4][4], Point *bMatrix[4][4]);
+    void multipliyMatrix(float t, CubicBezier *aMatrix, CubicBezier *bMatrix);
 };
 
 #endif /* CubicBezier_hpp */

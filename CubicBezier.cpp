@@ -129,22 +129,47 @@ void CubicBezier::Subdivide(float t, CubicBezier *segment1, CubicBezier *segment
 
     segment1->setPoint(3, p1 + p2); //Vierter Punkt für Segment1
     segment2->setPoint(0, p1 + p2); //Vierter Punkt für Segment2
+
+    multipliyMatrix(0.5, segment1, segment2);
 }
 
-void CubicBezier::multipliyMatrix(float t, Point *aMatrix[4][4], Point *bMatrix[4][4]) {
 
-    float product[4][4] =   {{1,                          0,                         0,                   0},
+void CubicBezier::multipliyMatrix(float t, CubicBezier *aMatrix, CubicBezier *bMatrix) {
+
+    float product1[4][4] =   {{1,                         0,                         0,                   0},
                             {(1 - t),                     t,                         0,                   0},
                             {(1 - t) * (1 - t),           2 * (1 - t) * t,           t * t,               0},
                             {(1 - t) * (1 - t) * (1 - t), 3 * (1 - t) * (1 - t) * t, 3 * (1 - t) * t * t, t * t * t}};
 
+    float product2[4][4] =  {{0,          0,              0,                             1},
+                            {0,           0,              1,                            (1-t)},
+                            {0,           t * t,          2 * (1 -t) * t,               (1 - t) * (1 -t)},
+                            {t * t * t,   3 * (1 -t) * t * t,  3 * (1 -t) * (1 -t) * t, (1 - t) * (1 - t) * (1 - t)}};
 
 
 
-        int rows = sizeof product / sizeof product[0];
-        int cols = sizeof product[0] / sizeof(int);
+        //int rows = sizeof product / sizeof product[0];
+        //int cols = sizeof product[0] / sizeof(int);
 
     for (int i = 0; i < 4; i++){
+        for ( int j = 0; j < 4; j++){
+            subDivMatrix1[i].m_x += product1[i][j] * aMatrix->points[j].m_x;
+            subDivMatrix1[i].m_y += product1[i][j] * aMatrix->points[j].m_y;
+            subDivMatrix2[i].m_x += product2[i][j] * bMatrix->points[j].m_x;
+            subDivMatrix2[i].m_y += product2[i][j] * bMatrix->points[j].m_y;
+        }
+    }
+
+    cout << "subDivMatrix für die rechte Hälfte" << endl;
+    for (int i = 0; i < 4; i++){
+        cout << "Stelle " << i << " " << "x: " << subDivMatrix1[i].m_x << "Y: " << subDivMatrix1[i].m_y << endl;
+    }
+
+    cout << "subDivMatrix für die linke Hälfte" << endl;
+    for (int i = 0; i < 4; i++){
+        cout << "Stelle " << i << " " << "x: " <<  subDivMatrix2[i].m_x << "Y: " << subDivMatrix1[i].m_y << endl;
+    }
+    /* for (int i = 0; i < 4; i++){
         for (int j = 0; j < 4; j++){
             subDivMatrix[i][j] = Point(0,0);
             for (int k = 0; k < 4; k++){
@@ -153,6 +178,7 @@ void CubicBezier::multipliyMatrix(float t, Point *aMatrix[4][4], Point *bMatrix[
             }
         }
     }
+    */
 
     /*
         for (int i = 0; i < 4; ++i) {
