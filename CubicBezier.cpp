@@ -131,6 +131,41 @@ void CubicBezier::Subdivide(float t, CubicBezier *segment1, CubicBezier *segment
     segment2->setPoint(0, p1 + p2); //Vierter Punkt für Segment2
 }
 
+void CubicBezier::multipliyMatrix(float t, Point *aMatrix[4][4], Point *bMatrix[4][4]) {
+
+    float product[4][4] =   {{1,                          0,                         0,                   0},
+                            {(1 - t),                     t,                         0,                   0},
+                            {(1 - t) * (1 - t),           2 * (1 - t) * t,           t * t,               0},
+                            {(1 - t) * (1 - t) * (1 - t), 3 * (1 - t) * (1 - t) * t, 3 * (1 - t) * t * t, t * t * t}};
+
+
+
+
+        int rows = sizeof product / sizeof product[0];
+        int cols = sizeof product[0] / sizeof(int);
+
+    for (int i = 0; i < 4; i++){
+        for (int j = 0; j < 4; j++){
+            subDivMatrix[i][j] = Point(0,0);
+            for (int k = 0; k < 4; k++){
+                subDivMatrix[i][j].m_x = subDivMatrix[i][j].m_x + (aMatrix[i][k]->m_x * bMatrix[k][j]->m_x);
+                subDivMatrix[i][j].m_y = subDivMatrix[i][j].m_y + (aMatrix[i][k]->m_y * bMatrix[k][j]->m_y);
+            }
+        }
+    }
+
+    /*
+        for (int i = 0; i < 4; ++i) {
+            for (int j = 0; j < 4; ++j) {
+                subDivMatrix[i][j] = Point (0,0);
+                for (int k = 0; k < 4; ++k) {
+                    subDivMatrix[i][j] = subDivMatrix[i][j] + (aMatrix[i][k] * bMatrix[k][j]);
+                }
+            }
+        }
+    }*/
+
+}
 
 void CubicBezier::setPoint(int i, Point a) {
     points[i] = a;
